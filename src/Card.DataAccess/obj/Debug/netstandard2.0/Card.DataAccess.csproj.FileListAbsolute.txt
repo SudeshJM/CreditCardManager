@@ -1,0 +1,10 @@
+C:\Users\sudesh.mascharenhas\source\repos\CreditCardManager\src\Card.DataAccess\bin\Debug\netstandard2.0\Card.DataAccess.deps.json
+C:\Users\sudesh.mascharenhas\source\repos\CreditCardManager\src\Card.DataAccess\bin\Debug\netstandard2.0\Card.DataAccess.dll
+C:\Users\sudesh.mascharenhas\source\repos\CreditCardManager\src\Card.DataAccess\bin\Debug\netstandard2.0\Card.DataAccess.pdb
+C:\Users\sudesh.mascharenhas\source\repos\CreditCardManager\src\Card.DataAccess\obj\Debug\netstandard2.0\Card.DataAccess.csprojAssemblyReference.cache
+C:\Users\sudesh.mascharenhas\source\repos\CreditCardManager\src\Card.DataAccess\obj\Debug\netstandard2.0\Card.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sudesh.mascharenhas\source\repos\CreditCardManager\src\Card.DataAccess\obj\Debug\netstandard2.0\Card.DataAccess.AssemblyInfoInputs.cache
+C:\Users\sudesh.mascharenhas\source\repos\CreditCardManager\src\Card.DataAccess\obj\Debug\netstandard2.0\Card.DataAccess.AssemblyInfo.cs
+C:\Users\sudesh.mascharenhas\source\repos\CreditCardManager\src\Card.DataAccess\obj\Debug\netstandard2.0\Card.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\sudesh.mascharenhas\source\repos\CreditCardManager\src\Card.DataAccess\obj\Debug\netstandard2.0\Card.DataAccess.dll
+C:\Users\sudesh.mascharenhas\source\repos\CreditCardManager\src\Card.DataAccess\obj\Debug\netstandard2.0\Card.DataAccess.pdb

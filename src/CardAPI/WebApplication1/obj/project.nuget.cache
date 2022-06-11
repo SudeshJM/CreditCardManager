@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Gi+Ox/AJy0cZ/RM3DIz5Db+jAbOQ5tCJzEU9e3Qedzg3MFoprAAePAsK3zHGfTVIO8dNowcwl+PvIIhYGF0ULw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\sudesh.mascharenhas\\source\\repos\\CreditCardManager\\src\\CardAPI\\WebApplication1\\CardAPI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\sudesh.mascharenhas\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.18\\microsoft.netcore.app.host.win-x64.3.1.18.nupkg.sha512"
+  ],
+  "logs": []
+}
