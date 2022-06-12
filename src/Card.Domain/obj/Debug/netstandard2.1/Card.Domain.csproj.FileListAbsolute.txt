@@ -1,0 +1,10 @@
+C:\Users\sudesh.mascharenhas\source\repos\CreditCardManager\src\Card.Domain\bin\Debug\netstandard2.1\Card.Domain.deps.json
+C:\Users\sudesh.mascharenhas\source\repos\CreditCardManager\src\Card.Domain\bin\Debug\netstandard2.1\Card.Domain.dll
+C:\Users\sudesh.mascharenhas\source\repos\CreditCardManager\src\Card.Domain\bin\Debug\netstandard2.1\Card.Domain.pdb
+C:\Users\sudesh.mascharenhas\source\repos\CreditCardManager\src\Card.Domain\obj\Debug\netstandard2.1\Card.Domain.csprojAssemblyReference.cache
+C:\Users\sudesh.mascharenhas\source\repos\CreditCardManager\src\Card.Domain\obj\Debug\netstandard2.1\Card.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sudesh.mascharenhas\source\repos\CreditCardManager\src\Card.Domain\obj\Debug\netstandard2.1\Card.Domain.AssemblyInfoInputs.cache
+C:\Users\sudesh.mascharenhas\source\repos\CreditCardManager\src\Card.Domain\obj\Debug\netstandard2.1\Card.Domain.AssemblyInfo.cs
+C:\Users\sudesh.mascharenhas\source\repos\CreditCardManager\src\Card.Domain\obj\Debug\netstandard2.1\Card.Domain.csproj.CoreCompileInputs.cache
+C:\Users\sudesh.mascharenhas\source\repos\CreditCardManager\src\Card.Domain\obj\Debug\netstandard2.1\Card.Domain.dll
+C:\Users\sudesh.mascharenhas\source\repos\CreditCardManager\src\Card.Domain\obj\Debug\netstandard2.1\Card.Domain.pdb

@@ -1,11 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lnxFJrmpqRsz1AAm16pdZVbFVLtVtrOTnGtgfJUNnYvmB1YAQBWIJUQX9rvPawwEN0+fK5K1lzG5c+7khdai8Q==",
+  "dgSpecHash": "zBRhG/gVAYhNIoYu5VsYUXDAY1Ch9LGeKWlnVr+y1TaRF58miIngdjYEJAxkXyPDXlpIKs85FwEMxJOdjh4Q1w==",
   "success": true,
   "projectFilePath": "C:\\Users\\sudesh.mascharenhas\\source\\repos\\CreditCardManager\\src\\Card.Services\\Card.Services.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\sudesh.mascharenhas\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\sudesh.mascharenhas\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }

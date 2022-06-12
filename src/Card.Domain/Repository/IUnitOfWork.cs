@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Card.Domain.Repository
 {
-    interface IUnitOfWork
+    public interface IUnitOfWork
     {
+        Task<int> SaveChangesAsync();
+        int SaveChanges();
     }
 }

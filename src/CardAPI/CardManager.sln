@@ -3,15 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardAPI", "WebApplication1\CardAPI.csproj", "{7170FED7-0681-40F4-B058-0915B3E6B979}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CardAPI", "WebApplication1\CardAPI.csproj", "{7170FED7-0681-40F4-B058-0915B3E6B979}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Card.Domain", "..\Card.Domain\Card.Domain.csproj", "{978880EC-EA37-4D16-B04D-1C73F53CAF8A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Card.Domain", "..\Card.Domain\Card.Domain.csproj", "{978880EC-EA37-4D16-B04D-1C73F53CAF8A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Card.DataAccess", "..\Card.DataAccess\Card.DataAccess.csproj", "{91470DB0-ED8C-4A6F-BADC-DDA11D19AA00}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Card.DataAccess", "..\Card.DataAccess\Card.DataAccess.csproj", "{91470DB0-ED8C-4A6F-BADC-DDA11D19AA00}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Card.Services", "..\Card.Services\Card.Services.csproj", "{E5CAF2C3-07CE-4F41-9DF9-4EC7DB570EA6}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{457B0DBF-A2ED-40FC-8022-E8CC7AE50DE4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Card.Services", "..\Card.Services\Card.Services.csproj", "{E5CAF2C3-07CE-4F41-9DF9-4EC7DB570EA6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

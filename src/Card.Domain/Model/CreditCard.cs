@@ -1,9 +1,16 @@
-﻿using System;
+﻿using Card.Domain.Model;
+using System;
 
-namespace Card.Domain
+namespace Card.Domain.Model
 {
-    public class CreditCard
+    public class CreditCard : Entity
     {
+
+        public CreditCard()
+        {
+            this.Id = Guid.NewGuid();
+            this.Balance = 0;
+        }
         public string Name { get; set; }
 
         public string CardNumber { get; set; }
