@@ -8,9 +8,17 @@ using System.Threading.Tasks;
 
 namespace CardAPI.Validators
 {
+    /// <summary>
+    /// Extended validation for credit card details.
+    /// </summary>
     public static class CreditCardValidator
     {
 
+        /// <summary>
+        /// Validates additional credit card details such as characters and luhn 10 check.
+        /// </summary>
+        /// <param name="creditCard">the credit card object</param>
+        /// <returns>True if credit card details are valid else false.</returns>
         public static ValidationResult ValidateCreditCard(this CreditCard creditCard)
         {
             ValidationResult result = new ValidationResult();

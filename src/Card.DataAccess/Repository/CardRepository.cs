@@ -1,9 +1,6 @@
 ﻿using Card.DataAccess.Configuration;
 using Card.Domain.Model;
 using Card.Domain.Repository;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Card.DataAccess.Repository
 {

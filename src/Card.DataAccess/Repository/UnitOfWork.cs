@@ -1,8 +1,5 @@
 ﻿using Card.DataAccess.Configuration;
 using Card.Domain.Repository;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Card.DataAccess.Repository 
@@ -16,19 +13,22 @@ namespace Card.DataAccess.Repository
             _dbContext = dbContext;
         }
 
+        /// <summary>
+        /// Saves changes to database asynchronously.
+        /// </summary>
+        /// <returns>Count of updated/added/removed rows.</returns>
         public Task<int> SaveChangesAsync()
         {
             return _dbContext.SaveChangesAsync();
         }
 
+        /// <summary>
+        /// Saves changes synchronously.
+        /// </summary>
+        /// <returns>ount of updated/added/removed rows.</returns>
         public int SaveChanges()
         {
             return _dbContext.SaveChanges();
-        }
-
-        public void Dispose()
-        {
-            _dbContext.Dispose();
         }
     }
 }

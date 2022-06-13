@@ -16,6 +16,9 @@ using Card.Domain.Shared;
 
 namespace CardAPI.Controllers
 {
+    /// <summary>
+    /// This Controller handle Card api requests.
+    /// </summary>
     [Route("api/v1/[controller]")]
     [ApiController]
     public class CardController : Controller
@@ -25,6 +28,12 @@ namespace CardAPI.Controllers
         private readonly IMapper _mapper;
         private readonly ILogger _logger;
 
+        /// <summary>
+        /// Constructor to initialise card controller
+        /// </summary>
+        /// <param name="cardService">The card service.</param>
+        /// <param name="mapper">The card mapping profile.</param>
+        /// <param name="logger">The logger.</param>
         public CardController(ICardService cardService, IMapper mapper, ILogger<CardController> logger)
         {
             _cardService = cardService;
@@ -34,9 +43,9 @@ namespace CardAPI.Controllers
 
 
         /// <summary>
-        /// 
+        /// Api to get Credit Card list.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>The list of credit cards or failure.</returns>
         [HttpGet("Cards")]
         public async Task<ActionResult<List<CardDto>>> GetAllCards()
         {
@@ -55,10 +64,10 @@ namespace CardAPI.Controllers
 
 
         /// <summary>
-        /// 
+        /// Api to add credit card to database.
         /// </summary>
-        /// <param name="newCard"></param>
-        /// <returns></returns>
+        /// <param name="newCard">The new card object.</param>
+        /// <returns>The added card or failure response.</returns>
         [HttpPost("AddCard")]
         public async Task<ActionResult<CardDto>> AddCard([FromBody]AddCardDto newCard)
         {
@@ -70,7 +79,7 @@ namespace CardAPI.Controllers
                 CreditCard creditCard = _mapper.Map<AddCardDto, CreditCard>(newCard);
                 ValidationResult validationResult = creditCard.ValidateCreditCard();
                 if (!validationResult.IsSuccess)
-                    return ValidationProblem(validationResult.Error);
+                    return BadRequest(validationResult.Error);
 
                 ServiceResult result= await _cardService.AddCreditCard(creditCard);
                 if(!result.IsSuccess)

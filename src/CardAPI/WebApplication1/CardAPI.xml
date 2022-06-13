@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CardAPI</name>
+    </assembly>
+    <members>
+        <member name="T:CardAPI.Controllers.CardController">
+            <summary>
+            This Controller handle Card api requests.
+            </summary>
+        </member>
+        <member name="M:CardAPI.Controllers.CardController.#ctor(Card.Domain.Services.ICardService,AutoMapper.IMapper,Microsoft.Extensions.Logging.ILogger{CardAPI.Controllers.CardController})">
+            <summary>
+            Constructor to initialise card controller
+            </summary>
+            <param name="cardService">The card service.</param>
+            <param name="mapper">The card mapping profile.</param>
+            <param name="logger">The logger.</param>
+        </member>
+        <member name="M:CardAPI.Controllers.CardController.GetAllCards">
+            <summary>
+            Api to get Credit Card list.
+            </summary>
+            <returns>The list of credit cards or failure.</returns>
+        </member>
+        <member name="M:CardAPI.Controllers.CardController.AddCard(CardAPI.Dto.AddCardDto)">
+            <summary>
+            Api to add credit card to database.
+            </summary>
+            <param name="newCard">The new card object.</param>
+            <returns>The added card or failure response.</returns>
+        </member>
+        <member name="T:CardAPI.Dto.AddCardDto">
+            <summary>
+            DTO to handle add card request.
+            </summary>
+        </member>
+        <member name="T:CardAPI.Dto.CardDto">
+            <summary>
+            DTO to handle card info.
+            </summary>
+        </member>
+        <member name="T:CardAPI.Mapping.CardMappingProfile">
+            <summary>
+            Mapping profile for Credit Card dto 
+            </summary>
+        </member>
+        <member name="M:CardAPI.Mapping.CardMappingProfile.#ctor">
+            <summary>
+            Constructor to initialise mapping.
+            </summary>
+        </member>
+        <member name="T:CardAPI.Startup">
+            <summary>
+            Configures application on startup.
+            </summary>
+        </member>
+        <member name="M:CardAPI.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Constructor to initialise the startup class.
+            </summary>
+            <param name="configuration">The application configuration</param>
+        </member>
+        <member name="P:CardAPI.Startup.Configuration">
+            <summary>
+            Current application configuration.
+            </summary>
+        </member>
+        <member name="M:CardAPI.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Congigure dependency services.
+            </summary>
+            <param name="services">The services collection.</param>
+        </member>
+        <member name="M:CardAPI.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            Configure the middlewares.
+            </summary>
+            <param name="app">The application builder</param>
+            <param name="env">Current environment.</param>
+        </member>
+        <member name="T:CardAPI.Validators.CreditCardValidator">
+            <summary>
+            Extended validation for credit card details.
+            </summary>
+        </member>
+        <member name="M:CardAPI.Validators.CreditCardValidator.ValidateCreditCard(Card.Domain.Model.CreditCard)">
+            <summary>
+            Validates additional credit card details such as characters and luhn 10 check.
+            </summary>
+            <param name="creditCard">the credit card object</param>
+            <returns>True if credit card details are valid else false.</returns>
+        </member>
+    </members>
+</doc>

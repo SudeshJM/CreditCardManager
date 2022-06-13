@@ -3,33 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardAPI", "WebApplication1\CardAPI.csproj", "{7170FED7-0681-40F4-B058-0915B3E6B979}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CardAPI", "src\CardAPI\WebApplication1\CardAPI.csproj", "{7170FED7-0681-40F4-B058-0915B3E6B979}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Card.Domain", "..\Card.Domain\Card.Domain.csproj", "{978880EC-EA37-4D16-B04D-1C73F53CAF8A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Card.Domain", "src\Card.Domain\Card.Domain.csproj", "{978880EC-EA37-4D16-B04D-1C73F53CAF8A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Card.DataAccess", "..\Card.DataAccess\Card.DataAccess.csproj", "{91470DB0-ED8C-4A6F-BADC-DDA11D19AA00}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Card.DataAccess", "src\Card.DataAccess\Card.DataAccess.csproj", "{91470DB0-ED8C-4A6F-BADC-DDA11D19AA00}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Card.Services", "..\Card.Services\Card.Services.csproj", "{E5CAF2C3-07CE-4F41-9DF9-4EC7DB570EA6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Card.Services", "src\Card.Services\Card.Services.csproj", "{E5CAF2C3-07CE-4F41-9DF9-4EC7DB570EA6}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{457B0DBF-A2ED-40FC-8022-E8CC7AE50DE4}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{BB94A882-FA17-4421-A610-63B36CA118F0}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "wwwroot", "wwwroot", "{08F29845-8BD2-4B52-BA42-DE924BD2455E}"
-	ProjectSection(SolutionItems) = preProject
-		index.html = index.html
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "script", "script", "{D431A870-7330-41FB-ABA1-6D61B3D1E066}"
-	ProjectSection(SolutionItems) = preProject
-		card.js = card.js
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "css", "css", "{D9A2176A-11F3-4D15-8E12-2C4AA267DC9E}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "views", "views", "{14AD8EB3-FB2C-4817-998A-C9D47F24CD83}"
-	ProjectSection(SolutionItems) = preProject
-		AddCard.html = AddCard.html
-		CardList.html = CardList.html
-	EndProjectSection
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreditCardTests", "CreditCardTests\CreditCardTests.csproj", "{D1255DA9-83C3-4458-A9BB-FB549C306B77}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,14 +37,16 @@ Global
 		{E5CAF2C3-07CE-4F41-9DF9-4EC7DB570EA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E5CAF2C3-07CE-4F41-9DF9-4EC7DB570EA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E5CAF2C3-07CE-4F41-9DF9-4EC7DB570EA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1255DA9-83C3-4458-A9BB-FB549C306B77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1255DA9-83C3-4458-A9BB-FB549C306B77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1255DA9-83C3-4458-A9BB-FB549C306B77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1255DA9-83C3-4458-A9BB-FB549C306B77}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{D431A870-7330-41FB-ABA1-6D61B3D1E066} = {08F29845-8BD2-4B52-BA42-DE924BD2455E}
-		{D9A2176A-11F3-4D15-8E12-2C4AA267DC9E} = {08F29845-8BD2-4B52-BA42-DE924BD2455E}
-		{14AD8EB3-FB2C-4817-998A-C9D47F24CD83} = {08F29845-8BD2-4B52-BA42-DE924BD2455E}
+		{D1255DA9-83C3-4458-A9BB-FB549C306B77} = {BB94A882-FA17-4421-A610-63B36CA118F0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D8551DE1-42D1-4E93-B982-B8D1AA30BFFA}

@@ -6,7 +6,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Card.DataAccess.Repository
@@ -23,39 +22,29 @@ namespace Card.DataAccess.Repository
         }
 
         /// <summary>
-        /// 
+        /// Gets items based on specified filter.
         /// </summary>
-        /// <param name="expression"></param>
-        /// <returns></returns>
+        /// <param name="expression">The filter expression</param>
+        /// <returns>The list of items</returns>
         public Task<List<T>> GetAsync(Expression<Func<T, bool>> expression)
         {
             return _dbSet.Where(expression).ToListAsync();
         }
 
         /// <summary>
-        /// 
+        /// Gets all items.
         /// </summary>
-        /// <param name="Id"></param>
-        /// <returns></returns>
-        public ValueTask<T> GetItemById(Guid Id)
-        {
-            return _dbSet.FindAsync(Id);
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
+        /// <returns>The list of items</returns>
         public Task<List<T>> ListAsync()
         {
             return _dbSet.ToListAsync();
         }
 
         /// <summary>
-        /// 
+        /// Adds item to database.
         /// </summary>
-        /// <param name="entity"></param>
-        /// <returns></returns>
+        /// <param name="entity">Adds entity to database</param>
+        /// <returns>The added object.</returns>
         public Task<T> AddAsync(T entity)
         {
             _dbSet.AddAsync(entity);

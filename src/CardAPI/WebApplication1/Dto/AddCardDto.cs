@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace CardAPI.Dto
 {
+    /// <summary>
+    /// DTO to handle add card request.
+    /// </summary>
     public class AddCardDto
     {
         [Required]

@@ -94,7 +94,11 @@ $(document).ready(function(){
     }
 
     function getItemHtml(item) {
-       return '<tr><td>' + item.name + '</td><td>' + item.cardNumber + '</td><td>' + item.currency + ' ' + item.balance + '</td><td>' + item.currency + ' ' + item.limit + '</td></tr>';
+        return '<tr><td>' + item.name
+            + '</td><td>' + item.cardNumber
+            + '</td><td>' + item.currency + ' ' + item.balance
+            + '</td><td>' + item.currency + ' ' + item.limit
+            + '</td></tr>';
     }
 
     getCards();

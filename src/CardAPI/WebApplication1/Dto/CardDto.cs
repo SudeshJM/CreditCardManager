@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace CardAPI.Dto
 {
+    /// <summary>
+    /// DTO to handle card info.
+    /// </summary>
     public class CardDto
     {
         public Guid Id { get; set; }
