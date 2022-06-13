@@ -79,7 +79,7 @@ namespace CardAPI.Controllers
                 CreditCard creditCard = _mapper.Map<AddCardDto, CreditCard>(newCard);
                 ValidationResult validationResult = creditCard.ValidateCreditCard();
                 if (!validationResult.IsSuccess)
-                    return BadRequest(validationResult.Error);
+                    return BadRequest(validationResult);
 
                 ServiceResult result= await _cardService.AddCreditCard(creditCard);
                 if(!result.IsSuccess)

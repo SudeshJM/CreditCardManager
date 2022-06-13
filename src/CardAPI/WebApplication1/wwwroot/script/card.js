@@ -41,12 +41,17 @@ $(document).ready(function(){
         })
             .then(response => response.json())
             .then(data => {
-                if (data.status && status !== 200) {
+                if (!data)
+                    return;
+
+                if (data.error || (data.status && status !== 200)) {
                     displayErrors(data);
                     return;
                 }
 
-                handleAddSuccessful(data);
+                if (data.name) {
+                    handleAddSuccessful(data);
+                }
             })
             .catch(error => {
                 $('#AddCardError').html('<span>' + error + '</span>');
@@ -74,12 +79,20 @@ $(document).ready(function(){
     }
 
     function displayErrors(data) {
-        var html = '<div>' + data.title + '</div>';
-        if (data.detail) {
-            html += '<div>' + data.detail + '</div>';
+
+        var html = '';
+        if (data.error) {
+            html += '<div>' + data.error + '</div>';
         }
-        else if(data.errors) {
-            html += '<div><span>' + JSON.stringify(data.errors).replace(/[\])}[{(]/g, '')  + '</span></div>';        
+        else {
+            html += '<div>' + data.title + '</div>';
+
+            if (data.detail) {
+                html += '<div>' + data.detail + '</div>';
+            }
+            else if (data.errors) {
+                html += '<div><span>' + JSON.stringify(data.errors).replace(/[\])}[{(]/g, '') + '</span></div>';
+            }
         }
 
         $('#AddCardError').html(html);

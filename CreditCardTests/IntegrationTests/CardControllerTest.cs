@@ -132,7 +132,7 @@ namespace CardManagerTests.IntegrationTests
 
             var responseContent = await response.Content.ReadAsStringAsync();
             Assert.IsNotEmpty(responseContent);
-            Assert.AreEqual("The card number is not valid.", responseContent);
+            Assert.IsTrue(responseContent.Contains("The card number is not valid."));
         }
 
         [Test]
@@ -149,7 +149,7 @@ namespace CardManagerTests.IntegrationTests
 
             var responseContent = await response.Content.ReadAsStringAsync();
             Assert.IsNotEmpty(responseContent);
-            Assert.AreEqual("The card number contains invalid characters.", responseContent);
+            Assert.IsTrue(responseContent.Contains("The card number contains invalid characters."));
         }
 
         [Test]
