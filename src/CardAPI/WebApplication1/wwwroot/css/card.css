@@ -1,8 +1,31 @@
-﻿#AddCard{
-    width : 50%;
-    margin : 40px 20px 20px 20px;
+﻿#CardContainer{
+    margin: 5% 20% 5% 20%;
+}
+
+#CardContainer h1 {
+    margin: 40px 0 20px 0;
+}
+
+#AddCard {
+    width: 50%;
+    margin: 40px 0 20px 0;
 }
 
 #CardList {
-    margin: 40px 20px 20px 20px;
+    margin: 40px 0 20px 0;
+}
+
+#AddCardError {
+    font-size: .875em;
+    color: #dc3545;
+}
+
+#AddCardSuccess span {
+    font-size: .875em;
+    color: green;
+    margin:10px;
+}
+
+#addCardButton {
+    width: 80px;
 }

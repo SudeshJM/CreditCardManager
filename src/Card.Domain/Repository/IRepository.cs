@@ -8,7 +8,7 @@ namespace Card.Domain.Repository
 {
     public interface IRepository<T> where T : Entity
     {
-        public Task<T> GetAsync(Expression<Func<T, bool>> expression);
+        public Task<List<T>> GetAsync(Expression<Func<T, bool>> expression);
 
         public ValueTask<T> GetItemById(Guid Id);
 

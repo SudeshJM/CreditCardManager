@@ -1,4 +1,5 @@
 ﻿using Card.Domain.Model;
+using Card.Domain.Shared;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,12 +11,24 @@ namespace CardAPI.Validators
     public static class CreditCardValidator
     {
 
-        public static bool IsCardNumberValid(this CreditCard creditCard)
+        public static ValidationResult ValidateCreditCard(this CreditCard creditCard)
         {
-            if (!Regex.IsMatch(creditCard.CardNumber, @"^[0-9]+$"))
-                return false;
+            ValidationResult result = new ValidationResult();
 
-            return LuhnCheck(creditCard.CardNumber);
+            if (!Regex.IsMatch(creditCard.CardNumber, @"^[0-9]+$"))
+            {
+                result.Error = "The card number contains invalid characters.";
+                return result;
+            }
+
+            if(!LuhnCheck(creditCard.CardNumber))
+            {
+                result.Error = "The card number is not valid.";
+                return result;
+            }
+
+            result.IsSuccess = true;
+            return result;
         }
 
         private static bool LuhnCheck(string cardNumber)

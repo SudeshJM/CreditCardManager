@@ -17,5 +17,7 @@ namespace CardAPI.Dto
         public Decimal Balance { get; set; }
 
         public Decimal Limit { get; set; }
+
+        public string Currency { get; set; }
     }
 }

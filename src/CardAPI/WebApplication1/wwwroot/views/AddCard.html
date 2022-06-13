@@ -6,8 +6,7 @@
     <form id="addCardForm" class="row g-3 needs-validation" novalidate>
         <div class="form-group">
             <label for="CardName">Name</label>
-            <input type="text" class="form-control" id="CardName" placeholder="example: Bob">
-            <!--required maxlength="100"-->
+            <input type="text" class="form-control" id="CardName" placeholder="example: Bob" required maxlength="100">
             <div class="invalid-feedback">
                 Please provide a valid name.
             </div>
@@ -26,10 +25,11 @@
                 Please provide a valid limit (0 to 100000000).
             </div>
         </div>
-        <div id="add-card-error"></div>
+        <div id="AddCardError"></div>
+        <div id="AddCardSuccess"></div>
         <div class="col-auto my-1">
             <button id="addCardButton" type="button" class="btn btn-primary">Add</button>
         </div>
-</form>
+    </form>
 </body>
 </html>

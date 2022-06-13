@@ -1,4 +1,5 @@
 ﻿using Card.Domain.Model;
+using Card.Domain.Shared;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -10,6 +11,6 @@ namespace Card.Domain.Services
     {
         public Task<List<CreditCard>> GetCreditCards();
 
-        public Task AddCreditCard(CreditCard creditCard);
+        public Task<ServiceResult> AddCreditCard(CreditCard creditCard);
     }
 }

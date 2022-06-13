@@ -5,9 +5,13 @@ $(document).ready(function(){
     $("#CardList").load("/views/CardList.html");
 
     $(document).on('click', '#addCardButton', addCard);
-    $('#add-card-error').html('');
+    $('#AddCardError').html('');
+    $('#AddCardSuccess').html('');
 
     function addCard(event) {       
+        $('#AddCardError').html('');
+        $('#AddCardSuccess').html('');
+
         var form = $("#addCardForm")[0];
         var isValid = form.checkValidity();
         if (!isValid) {
@@ -18,8 +22,6 @@ $(document).ready(function(){
         }
 
         form.classList.remove('was-validated');
-        $('#add-card-error').html('');
-
         const cardName = $('#CardName').val();
         const cardNumber = $('#CardNumber').val();
         const cardLimit = $('#CardLimit').val();
@@ -39,17 +41,15 @@ $(document).ready(function(){
         })
             .then(response => response.json())
             .then(data => {
-                if (data.errors) {
+                if (data.status && status !== 200) {
                     displayErrors(data);
                     return;
                 }
-                addItemToTable(data);
-                $('#CardName').val('');
-                $('#CardNumber').val('');
-                $('#CardLimit').val('');
+
+                handleAddSuccessful(data);
             })
             .catch(error => {
-                $('#add-card-error').html('<span>' + error + '</span>');
+                $('#AddCardError').html('<span>' + error + '</span>');
             });
     }
 
@@ -60,25 +60,41 @@ $(document).ready(function(){
             .catch(error => console.error("Unable to get Cards.", error));
     }
 
-    function displayErrors(data) {
-        var html = data.title
-        $(data.errors).each(function (index, item) {
-            html += '<div>' + item + '</div>';
-        });
-        $('#add-card-error').html(html);
+    function handleAddSuccessful(data) {
+        $('#AddCardSuccess').html('<span>Card is successfully added.</span>')
+        addItemToTable(data);
+        $('#CardName').val('');
+        $('#CardNumber').val('');
+        $('#CardLimit').val('');
     }
 
     function addItemToTable(item) {
-        var html = '<tr><td>' + item.name + '</td><td>' + item.cardNumber + '</td><td>' + item.balance + '</td><td>' + item.limit + '</td></tr>';
+        var html = getItemHtml(item);
         $('#CardsTable tbody').prepend(html);
+    }
+
+    function displayErrors(data) {
+        var html = '<div>' + data.title + '</div>';
+        if (data.detail) {
+            html += '<div>' + data.detail + '</div>';
+        }
+        else if(data.errors) {
+            html += '<div><span>' + JSON.stringify(data.errors).replace(/[\])}[{(]/g, '')  + '</span></div>';        
+        }
+
+        $('#AddCardError').html(html);
     }
 
     function displayCards(data) {
         var html=''
         $(data).each(function (index, item) {
-            html += '<tr><td>' + item.name + '</td><td>' + item.cardNumber + '</td><td>' + item.balance + '</td><td>' + item.limit + '</td></tr>';
+            html += getItemHtml(item);
         });
         $('#CardsTable tbody').html(html);
+    }
+
+    function getItemHtml(item) {
+       return '<tr><td>' + item.name + '</td><td>' + item.cardNumber + '</td><td>' + item.currency + ' ' + item.balance + '</td><td>' + item.currency + ' ' + item.limit + '</td></tr>';
     }
 
     getCards();

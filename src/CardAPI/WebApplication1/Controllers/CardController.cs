@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.Routing;
 using CardAPI.Validators;
 using System.Net;
 using Microsoft.Extensions.Logging;
+using Card.Domain.Shared;
 
 namespace CardAPI.Controllers
 {
@@ -31,6 +32,11 @@ namespace CardAPI.Controllers
             _logger = logger;
         }
 
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         [HttpGet("Cards")]
         public async Task<ActionResult<List<CardDto>>> GetAllCards()
         {
@@ -43,11 +49,16 @@ namespace CardAPI.Controllers
             catch(Exception ex)
             {
                 _logger.LogError(ex.Message);
-                return Problem("An unexpected error occured.", string.Empty, (int)HttpStatusCode.InternalServerError);
+                return Problem("Unable to get credit cards.", string.Empty, (int)HttpStatusCode.InternalServerError);
             }
         }
 
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="newCard"></param>
+        /// <returns></returns>
         [HttpPost("AddCard")]
         public async Task<ActionResult<CardDto>> AddCard([FromBody]AddCardDto newCard)
         {
@@ -57,17 +68,21 @@ namespace CardAPI.Controllers
                     return BadRequest(ModelState.Values);
 
                 CreditCard creditCard = _mapper.Map<AddCardDto, CreditCard>(newCard);
-                if (!creditCard.IsCardNumberValid())
-                    return ValidationProblem("The credit card number is not valid");
+                ValidationResult validationResult = creditCard.ValidateCreditCard();
+                if (!validationResult.IsSuccess)
+                    return ValidationProblem(validationResult.Error);
 
-                await _cardService.AddCreditCard(creditCard);
+                ServiceResult result= await _cardService.AddCreditCard(creditCard);
+                if(!result.IsSuccess)
+                    return Problem(result.Error, string.Empty, (int)HttpStatusCode.InternalServerError);
+
                 CardDto cardResponse = _mapper.Map<CreditCard, CardDto>(creditCard);
                 return Ok(cardResponse);
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex.Message);
-                return Problem("An unexpected error occured.", string.Empty, (int)HttpStatusCode.InternalServerError);
+                return Problem("Unable to add the credit card.", string.Empty, (int)HttpStatusCode.InternalServerError);
             }
         }
     }

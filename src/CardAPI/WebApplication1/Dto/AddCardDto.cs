@@ -20,7 +20,7 @@ namespace CardAPI.Dto
 
         [Required]
         [DataType("Decimal")]
-        [Range(0, 50000)]
+        [Range(0, 100000000)]
         public Decimal Limit { get; set; }
     }
 }
